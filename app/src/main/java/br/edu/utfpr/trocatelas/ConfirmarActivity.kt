@@ -25,6 +25,8 @@ class ConfirmarActivity : AppCompatActivity() {
         tvQtd = findViewById( R.id.tvQtd )
         tvValor = findViewById( R.id.tvValor )
 
+        btEnviar = findViewById( R.id.btEnviar );
+
         btEnviar.setOnClickListener{
             btEnviarOnClick()
         }
@@ -48,9 +50,9 @@ class ConfirmarActivity : AppCompatActivity() {
         intent.setData( Uri.parse( phone_number ) )
         intent.putExtra( "sms_body", sms_body )
 
-        if ( intent.resolveActivity( getPackageManager()) != null ) {
+        //if ( intent.resolveActivity( getPackageManager()) != null ) {
             startActivity( intent )
-        }
+        //}
 
     }
 }
